@@ -1,6 +1,7 @@
 #include "Polygon.h"
 #include "Line.h"
 #include "Curve.h"
+#include "ThreeD.h"
 
 class FrameBuffer {
 public:
@@ -225,6 +226,7 @@ public:
 	        }
 	    }
 	}
+	
 	void rasterScan(Polygon pol, int r, int g, int b, int a) {
 		drawPolygon(pol, r, g, b, a);
 
@@ -297,6 +299,12 @@ public:
 				drawLine(temp, c.points.at(i), r, g, b, a);
 				temp = c.points.at(i);
 			}
+		}
+	}
+
+	void draw3D(ThreeD t, int r, int g, int b, int a){
+		for (int i=0; i<t.edges_proj.size(); i++){
+			drawLine(t.edges_proj.at(i).src, t.edges_proj.at(i).dest, r, g, b ,a);
 		}
 	}
 

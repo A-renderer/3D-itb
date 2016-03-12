@@ -7,7 +7,7 @@ class Point {
 public:
 	Point();
 
-	Point(int x, int y, int z);
+	Point(int x, int y);
 
 	Point(const Point& p);
 
@@ -23,13 +23,8 @@ public:
 
 	void moveRight(float dx);
 
-	void moveBackward(float dz);
-
-	void moveForward(float dz);
-
 	int x;
 	int y;
-	int z;
 
 private:
 

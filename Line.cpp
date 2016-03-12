@@ -48,8 +48,6 @@ void Line::moveDown(float dy) {
 void Line::setLine(Point _src, Point _dest) {
 	src.x = _src.x;
 	src.y = _src.y;
-	src.z = _src.z;
 	dest.x = _dest.x;
 	dest.y = _dest.y;
-	dest.z = _dest.z;
 }
